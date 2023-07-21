@@ -47,3 +47,30 @@ function logTodo(id:number, title:string, completed:boolean) {
         Todo finished: ${completed}`
     )
 }
+
+let str: string;
+//str = 1; // incorrect
+str = 'string'; //good
+
+//TS defines types automatically
+let x = true;
+let myNumber = 1;
+let y = new Date();
+let score: number | string; //union
+
+//псевдоним типа
+type Score = number | string;
+const myScore1: Score = '1';
+let myScore0: number | string = 10;
+
+// any - no type, have to be defined
+
+let z:number = JSON.parse('6');
+let m:string = JSON.parse('str');
+
+let isOdd: boolean;
+if(z % 2 === 0) {
+    isOdd = false
+} else {
+    isOdd = true
+}
