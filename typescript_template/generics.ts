@@ -64,12 +64,12 @@ function printAny<T>(arr: T[]):void {
 }
 printAny<number>([1, 22, 35])
 
-// function fillArray<T>(len: number, elem: T): T[] {
-//     return new Array<T>(len).fill(elem);
-// }
+function fillArray<T>(len: number, elem: T): T[] {
+    return new Array<T>(len).fill(elem);
+}
 
 // array of 10 stars
-//const abstractArray = fillArray<string>(10, '*');
+const abstractArray = fillArray<string>(10, '*');
 
 interface Array<T> {
     concat(...items: Array<T>[] | T[]): T[];
