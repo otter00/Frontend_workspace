@@ -1,15 +1,17 @@
 import React from 'react'; 
 
-export interface InputProps {
+export interface InputProps extends React.HTMLAttributes<HTMLLabelElement> {
+    children: React.ReactNode,
     value: string,
     type?:  "checkbox" | "radio" | "text" | undefined,
-    // className?: string,
 }
 
-export default function InputComponent({value, type} : InputProps) {
+export default function InputComponent({children, value, type, ...other} : InputProps) {
     return (
         <>
-        <input type={type} value={value}></input>
+        <label {...other}>{children}
+            <input type={type} value={value}></input>
+        </label>
         </>
     )
 }

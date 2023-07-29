@@ -4,19 +4,19 @@ import React from 'react';
 //     children: any;
 // }
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>  {
     onClick: React.MouseEventHandler | undefined,
     children: React.ReactNode,
     type?:  "button" | "submit" | "reset" | undefined,
-    // className?: string,
 }
 
-export default function ButtonComponent({onClick, children, type} : ButtonProps) {
+export default function ButtonComponent({onClick, children, type, ...other} : ButtonProps) {
     return (
         <>
         <button 
         type={type}
-        onClick={onClick}>{children}</button>
+        onClick={onClick}
+        {...other}>{children}</button>
         </>
     )
 }
