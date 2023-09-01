@@ -1,0 +1,13 @@
+.red_button {
+  background-color: red;
+}
+
+.green_button {
+  background-color: greenyellow;
+}
+
+.button_appearance {
+  height: 55px;
+  width: 115px;
+  border-radius: 10px;
+}/*# sourceMappingURL=ButtonStyle.module.css.map */
